@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-padding-top: 80px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 0, 0);
+    color:rgb(255, 0, 0);
+    background-color: black;
+}
+header{
+   margin-top: 20px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 1rem 9%;
+   background-color:transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color:rgb(255, 0, 0);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 1.5s ease;
+}
+.logo:hover{
+    transform: scale(1.5);
+}
+nav a{
+    font-size: 1.8rem;
+    color:rgb(255, 0, 0);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+ nav a:hover,
+ nav a.active{
+    color:rgb(255, 196, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+ }
+ section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+ }
+ .home{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 8rem;
+     background-color: rgb(0, 0, 0);
+ }
+ .home .home-content h1{ 
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+ }
+ span{
+    color: rgb(255, 0, 0);
+ }
+ .home-content h3{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+ }
+ .home-content p{
+    font-size: 1.6rem;
+ }
+ .home-img img{
+    position: relative;
+    width: 80vh;
+    cursor: pointer;
+    transition: 0.3s ease;
+ }
+ .home-img img:hover{
+     transform: scale(1.1);
+ }
+  .social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    font-size: 2rem;
+    border: 0.2rem solid rgb(255, 0, 0);
+    border-radius: 50%;
+    color: rgb(255, 196, 0);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+  }
+ .social-icons a:hover{
+    color: rgb(255, 0, 0);
+    background-color:rgb(255, 145, 0);
+    transform: scale(1.3) translateY(-5px);
+    box-shadow:  0 0 25px rgb(255, 217, 0);  
+ }
+.btn{
+  display: inline-block;
+  padding: 1rem;
+  background-color: transparent ;
+  border-radius: 4rem;
+  border: 2px solid rgb(255, 0, 0);
+  font-size: 1.6rem;
+  color:rgb(255, 196, 0);
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+.btn:hover{
+    transform: scale3d(1.00);
+    background-color:rgb(255, 0, 0);
+    color:rgb(0, 0, 0);
+    box-shadow: 0 0 25px rgb(255, 208, 0);
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 250px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{ 
+    content:  "";
+    color:darkorange;
+    animation: words 20s infinite;
+}
+.typing-text span::after{ 
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute; 
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(255, 0, 0);
+    }
+}
+
+@keyframes words{
+  0% ,20%{
+    content: "grande líder";
+  }
+  21%, 40%{
+    content: "titanium da alemanha"
+  }
+  41%, 60%{
+    content: "o mais poderoso de todos"
+  }
+  61%, 80%{
+    content: "desafiador da bmw";
+  }
+  81%,100%{
+    content: "campeão de design"
+  }
+}
+@media(max-width:995px){
+   nav{
+    position: absolute;
+    display: none;
+    top:0;
+    right:0;
+    width:40%;
+    border-left: 3px solid rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+    padding: 1rem;
+    background-color:rgb(0, 0, 0);
+    border-top: 0.1rem solid gold
+     (255, 215, 0)
+   }
+   nav.active{
+    display: block;
+   }
+   nav a{
+       display: block;
+       font-size: 2rem;
+       margin: 3rem 0;
+   }
+   nav a:hover,
+   nav.active{
+       padding: 1rem;
+       border-radius: 0.5rem;
+       border-bottom: 0.5rem solid rgb(255, 0, 0);
+   }
+}
+@media (max-width: 1000px){
+   .home{
+    gap: 4rem;
+   }
+}
+@media(max-width: 995px){
+    .home{
+      flex-direction: column;
+      margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+      font-size: 4rem;
+    }
+    .home-img img{
+      width: 70vw;
+      margin-top: 4rem;
+    }
+}
+ .menu-toggle{
+  display: none;
+ }
+ .menu-icon{
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 101;
+ }
+ .menu-icon span{
+  display:block;
+  height: 4px;
+  background-color: rgb(255, 217, 0);
+  border-radius: 2px;
+ }
+ @media(max-width:995px){
+     .menu-icon{
+      display:flex;
+     }
+     #menu-toggle:checked ~ nav{
+    display:block;
+}
+ }
+
+.blocos h3{
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   border-left: 5px solid rgb(255, 0, 0);
+   padding-left: 1.5rem;
+   color:black;
+}
+.blocos p{
+   font-size: 1.8rem;
+   line-height: 1.7;
+   color: red;
+  
+}
